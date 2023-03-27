@@ -74,7 +74,7 @@ controls.enableDamping = true
  */
 const cube = new THREE.Mesh(
     new THREE.BoxGeometry(1, 1, 1),
-    new THREE.MeshBasicMaterial({ color: 0xff0000 })
+    new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
 )
 scene.add(cube)
 
@@ -94,7 +94,7 @@ scene.add(cube)
 
 // let model;
 // gltfLoader.load(
-//     'DeskTop.glb',
+//     'model.glb',
 //     (gltf) => {
 
 //         //for singular object scene only
@@ -211,7 +211,7 @@ bokehFolder.addInput(obj, 'maxblur', { min: 0, max: 0.1 }).on('change', () => {
 });
 
 // Add a boolean control to the folder for toggling the wireframe
-const wireframeControl = pane.addInput({ wireframe: false }, 'wireframe');
+const wireframeControl = pane.addInput({ wireframe: true }, 'wireframe');
 wireframeControl.on('change', (value) => {
   cube.material.wireframe = value.value; // cause value is an object and inside it we have value: boolean
 });
