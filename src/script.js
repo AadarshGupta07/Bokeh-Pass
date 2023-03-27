@@ -166,9 +166,9 @@ effectComposer.addPass(renderPass)
 
 
 let obj = {
-    focus: 0.0,
+    focus: 0.7717,
     aperture: 0.01,
-    maxblur: 0.01,
+    maxblur: 0.10,
 }
 
 // Bokeh pass
